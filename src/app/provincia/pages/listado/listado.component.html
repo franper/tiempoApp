@@ -1,0 +1,11 @@
+<h2>Listado de Provincias</h2>
+<table class="table table-hover">
+    <tbody>
+        <tr *ngFor="let provincia of provincias; let i = index">
+            <td [class]="(i % 2) ? 'par' : 'impar'">
+                <a [routerLink]="['/detalle', provincia.CODPROV]">{{ provincia.NOMBRE_PROVINCIA }}</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

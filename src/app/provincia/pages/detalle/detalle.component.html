@@ -1,0 +1,22 @@
+<h1>{{ provincia.title }}</h1>
+<div class="row">
+    <div    *ngFor="let ciudad of provincia.ciudades"
+    class="col card m-2" style="width: 16rem;"
+    [class]="getClass(ciudad.temperatures.min)">
+        <div class="row card-body">
+            <h5 class="col card-title">{{ciudad.name}}</h5>           
+            <span class="col card-text">{{ ciudad.temperatures.min }} ºC</span>
+            <span class="col card-text">{{ ciudad.temperatures.max }} ºC</span>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h6>Hoy</h6>
+    <p>{{ provincia.today.p}}</p>
+</div>
+
+<div>
+    <h6>Mañana</h6>
+    <p>{{ provincia.tomorrow.p}}</p>
+</div>
