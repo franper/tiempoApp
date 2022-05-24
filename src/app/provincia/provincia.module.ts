@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { ListadoComponent } from './pages/listado/listado.component';
 import { DetalleComponent } from './pages/detalle/detalle.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -20,7 +21,8 @@ import { DetalleComponent } from './pages/detalle/detalle.component';
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ]
 })
 export class ProvinciaModule { }
